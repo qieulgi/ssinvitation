@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framed Design</title>
+    <style>
+        /* Reset Styles */
+        body, h1, p, div, img {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        /* Dark Green Background */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #013220; /* Dark Green */
+            text-align: center;
+        }
+
+        /* Frame Container */
+        .frame-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90vw; /* Responsive */
+            max-width: 600px; /* Limits max size */
+            margin-bottom: 100px; /* Increased gap */
+            margin-top: 100px; /* Centering the frame more */
+        }
+
+        /* Frame Image */
+        .frame-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: relative;
+            z-index: 2; /* Keeps frame above oval */
+        }
+
+        /* Background Image */
+        .background-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 1; /* Fully opaque */
+        }
+
+        /* Beige Oval Shape */
+        .oval {
+            position: absolute;
+            width: 70%;
+            height: 50%;
+            background-color: rgba(245, 245, 220, 0.7); /* Beige with transparency */
+            border-radius: 50%;
+            z-index: 1; /* Places behind frame */
+        }
+
+        /* Text Inside Frame */
+        .text-content {
+            position: absolute;
+            z-index: 3; /* Ensures text appears above */
+            color: black;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            max-width: 60%;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            font-weight: bold;
+            color: black;
+            margin-top: 50px; /* Increased spacing */
+            background-color: white;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <img class="background-image" src="seb-zurcher-h04c2IAyXp8-unsplash.jpg" alt="Scenic Mountain View">
+    
+    <div class="frame-container">
+        <div class="oval"></div>
+        <img src="frame_transparent.png" alt="Decorative Frame">
+        <div class="text-content">
+            <h1>Join Us for the 2025 Summer Solstice</h1>
+            <p>From June 20th-25th in Sweden!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© Your Name, Year. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+    </footer>
+
+</body>
+</html>
