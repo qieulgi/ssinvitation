@@ -30,10 +30,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 90vw; /* Responsive */
-            max-width: 600px; /* Limits max size */
-            margin-bottom: 100px; /* Increased gap */
-            margin-top: 100px; /* Centering the frame more */
+            width: 80vw; /* Increased size */
+            max-width: 900px; /* Increased max size */
+            height: 80vh; /* Takes up more screen space */
+            margin-bottom: 50px; /* Adjusted spacing */
         }
 
         /* Frame Image */
@@ -58,8 +58,8 @@
         /* Beige Oval Shape */
         .oval {
             position: absolute;
-            width: 70%;
-            height: 50%;
+            width: 85%;
+            height: 65%;
             background-color: rgba(245, 245, 220, 0.7); /* Beige with transparency */
             border-radius: 50%;
             z-index: 1; /* Places behind frame */
@@ -70,10 +70,10 @@
             position: absolute;
             z-index: 3; /* Ensures text appears above */
             color: black;
-            font-size: 1.2em;
+            font-size: 2em; /* Increased text size */
             font-weight: bold;
             text-align: center;
-            max-width: 60%;
+            max-width: 70%;
         }
 
         /* Footer Styling */
@@ -81,7 +81,7 @@
             text-align: center;
             font-weight: bold;
             color: black;
-            margin-top: 50px; /* Increased spacing */
+            margin-top: 20px; /* Adjusted spacing */
             background-color: white;
             padding: 10px;
             width: 100%;
