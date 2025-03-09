@@ -3,41 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Framed Design</title>
+    <title>Summer Solstice</title>
+
+    <!-- Google Fonts: Fleur De Leah -->
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+        
+        /* Aestera Font */
+        @font-face {
+            font-family: 'Aestera';
+            src: url('Aestera.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         /* Reset Styles */
-        body, h1, p, div, img {
+        * {
             margin: 0;
             padding: 0;
-            border: 0;
             box-sizing: border-box;
         }
 
-        /* Dark Green Background */
+        /* Page Background */
         body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background-color: #013220; /* Dark Green */
             text-align: center;
+            overflow: hidden; /* Prevents any unwanted scrolling */
+            position: relative;
+            font-family: 'Aestera', sans-serif; /* Applying Aestera Font */
         }
 
-        /* Frame Container - Fills the screen but leaves a 1-inch border */
+        /* Background Image */
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Puts it in the background */
+        }
+
+        /* Simple Title */
+        .fancy-title {
+            font-size: 4em;
+            font-weight: bold;
+            font-family: 'Aestera', sans-serif;
+            color: #FFD700; /* Mustard Yellow */
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 2px 2px 0 #FFFFFF, -2px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px 2px 0 #FFFFFF; /* White outline */
+        }
+
+        /* Frame Container */
         .frame-container {
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: calc(100vw - 2in); /* Leaves 1-inch border on left & right */
-            height: calc(100vh - 2in); /* Leaves 1-inch border on top & bottom */
-            max-width: 900px; /* Prevents excessive stretching on large screens */
-            max-height: 90vh; /* Prevents overflow on very tall screens */
+            width: calc(100vw - 2in); /* Leaves a 1-inch border on left & right */
+            height: calc(100vh - 2in); /* Leaves a 1-inch border on top & bottom */
+            max-width: 900px; /* Prevents excessive stretching */
+            max-height: 90vh; /* Prevents overflow */
         }
 
         /* Frame Image */
-        .frame-container img {
+        .frame-container img.frame {
             width: 100%;
             height: 100%;
             display: block;
@@ -45,33 +83,25 @@
             z-index: 2; /* Keeps frame above oval */
         }
 
-        /* Background Image */
-        .background-image {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-            opacity: 1; /* Fully opaque */
-        }
-
-        /* Beige Oval Shape - Adjusted to Fit Properly */
+        /* Beige Oval Shape */
         .oval {
             position: absolute;
-            width: 65%; /* Ensures it fits inside frame */
-            height: 55%;
+            width: 70%;
+            height: 50%;
             background-color: rgba(245, 245, 220, 0.7); /* Beige with transparency */
             border-radius: 50%;
             z-index: 1; /* Behind frame */
         }
 
-        /* Text Inside Frame */
+        /* Text Inside the Frame */
         .text-content {
             position: absolute;
             z-index: 3; /* Ensures text appears above */
-            color: black;
-            font-size: 2em; /* Increased text size */
-            font-weight: bold;
+            color: #013220; /* Dark Green */
+            font-family: 'Fleur De Leah', cursive; /* Applying Fleur De Leah font */
+            font-size: 2em;
+            font-weight: 400;
+            font-style: normal;
             text-align: center;
             max-width: 60%;
         }
@@ -85,22 +115,29 @@
             background-color: white;
             padding: 10px;
             width: 100%;
+            position: absolute;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
 
+    <!-- Background Image -->
     <img class="background-image" src="seb-zurcher-h04c2IAyXp8-unsplash.jpg" alt="Scenic Mountain View">
-    
+
+    <!-- Simple Title -->
+    <h1 class="fancy-title">Summer Solstice</h1>
+
+    <!-- Frame Container -->
     <div class="frame-container">
         <div class="oval"></div>
-        <img src="frame_transparent.png" alt="Decorative Frame">
+        <img class="frame" src="frame_transparent.png" alt="Decorative Frame">
         <div class="text-content">
-            <h1>Join Us for the 2025 Summer Solstice</h1>
-            <p>From June 20th-25th in Sweden!</p>
+            <p>Join us from June 20th - June 25th</p>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>© Your Name, Year. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
     </footer>
