@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summer Solstice</title>
 
-    <!-- Google Fonts: Fleur De Leah -->
+    <!-- Google Fonts: Fleur De Leah and Praise -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Praise&display=swap');
         
         /* Aestera Font */
         @font-face {
@@ -28,7 +28,7 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             min-height: 100vh;
             background-color: #013220; /* Dark Green */
@@ -36,6 +36,7 @@
             overflow: hidden; /* Prevents any unwanted scrolling */
             position: relative;
             font-family: 'Aestera', sans-serif; /* Applying Aestera Font */
+            padding: 5vh 0; /* Ensure content stays balanced */
         }
 
         /* Background Image */
@@ -54,12 +55,10 @@
             font-size: 4em;
             font-weight: bold;
             font-family: 'Aestera', sans-serif;
-            color: #FFD700; /* Mustard Yellow */
+            color: #FFFFFF; /* White */
             text-transform: uppercase;
             letter-spacing: 5px;
-            margin-bottom: 30px;
-            text-align: center;
-            text-shadow: 2px 2px 0 #FFFFFF, -2px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px 2px 0 #FFFFFF; /* White outline */
+            text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000; /* Black outline */
         }
 
         /* Frame Container */
@@ -68,10 +67,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: calc(100vw - 2in); /* Leaves a 1-inch border on left & right */
-            height: calc(100vh - 2in); /* Leaves a 1-inch border on top & bottom */
+            width: 60vw;
             max-width: 900px; /* Prevents excessive stretching */
-            max-height: 90vh; /* Prevents overflow */
+            height: 60vh;
+            max-height: 600px; /* Balanced height */
         }
 
         /* Frame Image */
@@ -86,9 +85,9 @@
         /* Beige Oval Shape */
         .oval {
             position: absolute;
-            width: 70%;
-            height: 50%;
-            background-color: rgba(245, 245, 220, 0.7); /* Beige with transparency */
+            width: 65%;
+            height: 45%;
+            background-color: rgba(245, 245, 220, 0.9); /* Beige with more transparency */
             border-radius: 50%;
             z-index: 1; /* Behind frame */
         }
@@ -99,11 +98,11 @@
             z-index: 3; /* Ensures text appears above */
             color: #013220; /* Dark Green */
             font-family: 'Fleur De Leah', cursive; /* Applying Fleur De Leah font */
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: 400;
-            font-style: normal;
             text-align: center;
-            max-width: 60%;
+            max-width: 50%;
+            line-height: 1.5;
         }
 
         /* Footer Styling */
@@ -111,12 +110,13 @@
             text-align: center;
             font-weight: bold;
             color: black;
-            margin-top: 10px;
             background-color: white;
             padding: 10px;
             width: 100%;
-            position: absolute;
-            bottom: 0;
+        }
+
+        footer p {
+            font-family: 'Praise', cursive;
         }
     </style>
 </head>
@@ -133,7 +133,7 @@
         <div class="oval"></div>
         <img class="frame" src="frame_transparent.png" alt="Decorative Frame">
         <div class="text-content">
-            <p>Join us from June 20th - June 25th</p>
+            <p>Join us from June 20th - June 25th in Sweden!<br>Location: The Stockholm Archipelago<br>Time: 1 PM<br>Dress Code: Summer/Earthy</p>
         </div>
     </div>
 
